@@ -1,0 +1,32 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- bean definitions here -->
+
+    <bean id="actor" class="com.stackroute.domain.Actor" scope="prototype">
+        <property name="name" value="siddharth malhothara"></property>
+        <property name="gender" value="male"></property>
+        <property name="age" value="30"></property>
+    </bean>
+
+
+    <bean id="bean-1" class="com.stackroute.domain.Movie">
+        <property name="actor" ref="actor"></property>
+    </bean>
+    <bean id="actor1" class="com.stackroute.domain.Actor" scope="prototype">
+        <property name="name" value="joy"></property>
+        <property name="gender" value="female"></property>
+        <property name="age" value="35"></property>
+    </bean>
+    <bean id="bean-2" class="com.stackroute.domain.Movie">
+        <property name="actor" ref="actor1">
+        </property>
+    </bean>
+
+
+
+</beans>
