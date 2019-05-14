@@ -4,7 +4,7 @@ public class Movie {
     private Actor actor;
 
     public Movie() { }
-
+    @Autowired
     public Movie( Actor actor) {
 
         this.actor = actor;
