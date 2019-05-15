@@ -11,7 +11,7 @@ public class Main {
     public  static void main(String[] args) {
 
 
-        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("autowirebean.xml");
+        ApplicationContext applicationContext=new ClassPathXmlApplicationContext("awareinterfacebean.xml");
         Movie movie1=(Movie)applicationContext.getBean("movie1");
         System.out.println(movie1.toString());
 

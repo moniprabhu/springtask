@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+       http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+
+    <bean id="movie1" autowire="byType" class="com.stackroute.domain.Movie">
+        <property   name= "actor" ref="actor"></property>
+
+    </bean>
+
+    <!--    <bean id="Actor" class="com.stackroute.domain.Actor">-->
+    <!--        <property name="name" value="aart"></property>-->
+    <!--        <property name="age" value="26"></property>-->
+    <!--        <property name="gender" value="male"></property>-->
+    <!--    </bean>-->
+
+    <bean id="actor" class="com.stackroute.domain.Actor">
+        <property name="name" value="suriya"></property>
+        <property name="gender" value="male"></property>
+        <property name="age" value="34"></property>
+    </bean>
+    <bean id="lifecycledemo" class="com.stackroute.domain.LifeCycleDemo" init-method="customInit" destroy-method="customDestroy">
+
+    </bean>
+
+    <bean id="postprocessor" class="com.stackroute.domain.PostProcessorDemo"></bean>
+
+</beans>
